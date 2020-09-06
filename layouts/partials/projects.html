@@ -1,4 +1,4 @@
-{{ $mainSections := .Site.Params.mainSections | default (slice "post") }}
+{{ $mainSections := .Site.Params.mainSections | default (slice "project") }}
 {{ $section := where .Site.RegularPages "Section" "in" $mainSections }}
 {{ $section_count := len $section }}
 {{ $n_posts := $.Param "recent_posts_number" | default 6 }}
@@ -11,13 +11,13 @@
             <a aria-current="page" class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 " href="{{ .Site.BaseURL }}">
                 Overview
             </a>
-            <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 selected" href="{{ absURL "posts/" }}">
+            <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3" href="{{ absURL "posts/" }}">
                 Posts
                 <span class="Counter hide-lg hide-md hide-sm">
                     {{ $section_count}}
                 </span>
             </a>
-            <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3" href="{{ absURL "projects/" }}">
+            <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 selected" href="{{ absURL "projects/" }}">
                 Projects
             </a>
             <a class="UnderlineNav-item mr-0 mr-md-1 mr-lg-3 " href="{{ absURL "about/" }}">
