@@ -9,7 +9,7 @@ homepage = "https://github.com/MeiK2333"
 tags = ["blog", "google analytics"]
 features = ["google analytics"]
 min_version = "0.41"
-
+light = true
 [author]
   name = "MeiK"
   homepage = "https://github.com/MeiK2333"

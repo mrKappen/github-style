@@ -1,0 +1,13 @@
+{{partial "head.html" .}}
+{{partial "header.html" .}}
+<div class="container wrapper tags">
+  <h1 class="page-title">#{{ .Title }}</h1>
+  {{ with (.Site.GetPage .Title) }}
+    {{ range .Pages }}
+    <div class="pt-0 pt-lg-4 ">
+    <a href="{{ .Permalink }}">{{ .Title }}</a>
+    </div>
+    {{ end }}
+  {{ end }}
+</div>
+<!-- {{partial "footer.html" .}} -->
